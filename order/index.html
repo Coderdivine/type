@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <section>
+    <p>Social Bit</p>
+        <div class="table" id="table">
+            <div class="header">
+                <p>Followers</p>
+                <p>Description</p>
+                <p>Amount</p>
+            </div>
+            <div class="rows">
+                <p>20</p>
+                <p id="pad">User bought 20 follower for amount.<br><small>Des...</small></p>
+                <p>Amount</p>
+            </div>
+            <div class="rows">
+            <p>20</p>
+            <p id="pad">User bought 20 follower for amount.<br><small>Des...</small></p>
+            <p>Amount</p>
+            </div>
+            <a href="../index.html">Go back Home page</a>
+        </div>
+    </section>
+</body>
+</html>
+<script>
+    var des = localStorage.getItem("savedsb")?JSON.stringify(localStorage.getItem("savedsb")):[];
+    var table = document.getElementById("table")
+    var amount = localStorage.getItem("amountsb");
+    var carted = des.map(x=>
+    `<div class="header">
+    <p>Followers</p>
+    <p>Description</p>
+    <p>Amount</p>
+    </div>
+    <div class="rows">
+    <p>20</p>
+    <p id="pad">User bought 20 follower for amount.<br><small>Des...</small></p>
+    <p>Amout</p>
+    </div>`
+    );
+    table.innerHTML = carted + `<br><p>No saved data<br><h1><a href="../index.html"> Back to Home page</a></h1> </p>`;
+    console.log("cart", des);
+</script>

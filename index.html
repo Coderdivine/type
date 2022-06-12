@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SocialBit</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <nav class="navbar">
+    <h1 class="logo">SocialBit</h1>
+    <ul class="nav-links">
+    <li class="active"><a href="#home" >Home</li>
+    <li><a href="#blog">Blog</li>
+    <li><a href="./plan/index.html"  >Plans</li>
+    <li><a href="./order/index.html"  >My Order(3)</li>
+    <li><a href="#explore"  >Explore</li>
+    <li class="ctn" ><a href="#about">About</a></li>
+    </ul>
+    <i class="menu-btn">&#9776;</i>
+    </nav>
+    <header>
+    <div class="header-content">
+    <h2 id="home">Welcome to Social Bit</h2>
+    <div class="line"></div>
+    <h1 >Get legit or desired followers on instagram and linkedln</h1>
+    <a href="./plan/index.html" class="ctn" > View Plans</a>
+
+    </div>
+    </div>
+    </header>
+    <section class="event">
+    <div class="title">
+    <h1 id="blog">Blog</h1>
+    <div class="line"></div>
+    </div>
+    <div class="row">
+    <div class="col">
+    <img src="./Check.jpg" alt="option"/>
+    <h4>Security</h4>
+    <p>Social Bit is a website used in promoting user page with security and privacy of user information.All Social Bit need is your username for promotion.</p>
+    </div>
+    <div class="col">
+    <img src="./Ass.png" alt="option2"/>
+    <h4>Assurance</h4>
+<p>Social Bit goes extra miles in promotion of instagram or linkedln pages with the use of different advertisment platform across the world.We assure you a better promotion.</p>
+    </div>
+    <div class="col">
+    <img src="./Stat.jpg" alt="option2"/>
+    <h4>Statistics</h4>
+<p id="users">Available user:18000</p><br>
+<p id="ava">Page on promotion:12000</p>
+    </div>
+    <div class="col">
+    <img src="./About.png" alt="option2"/>
+    <h4 id="about">About</h4>
+<p>Social Bit has been in existence since 2017,it was created by elon mosel peter to satisfy user value and connection with people.</p>
+    </div>
+    </div>
+    </section>
+    <section class="explore">
+    <div id="explore" class="explore-content">
+    <h1>3xplore </h1>
+    <div class="line"></div>
+<p>SHOP for your new year electronics on jumia
+.</p>
+<a href="https://kol.jumia.com/api/click/link/44efcf77-6be7-44c2-b623-37c837208b52/07ff1703-0821-4cc3-ad0e-2f0146d363df" class="ctn">Get Now</a>
+    </div>
+    
+    </section>
+    <!--
+    <section class="tours">
+    <div class="row">
+    <div class="col content-col">
+    <h1>Upcoming tours and destination</h1>
+    <div class="line">
+    </div>
+    <p>lorem,ipsum dolor sit amet conseectetour adipisicing</p>
+    <a href="#" class="ctn">Learn More</a>
+    </div>
+    <div class="col image-col">
+    <div class="image-gallery">
+    <img src="./IMG_20220110_115824_723.jpg" alt="no img">
+    <img src="./IMG_20220110_115824_723.jpg" alt="no img">
+    <img src="./IMG_20220110_115824_723.jpg" alt="no img">
+    <img src="./IMG_20220110_115824_723.jpg" alt="no img">
+    
+    
+    </div>
+    </div>
+    </div>
+    </section>-->
+    <section class="footer">
+    <p>&copy; copyright 2022</p>
+    </section>
+    
+    <script>
+    const ava = document.getElementById("ava");
+    const users = document.getElementById("users");
+    const menubtn = document.querySelector(".menu-btn");
+    const navlinks = document.querySelector(".nav-links");
+    
+    menubtn.addEventListener('click',()=>{
+    navlinks.classList.toggle("mobile-menu")
+    
+    });
+    function randoms(){
+    const nums = 6;
+    const value = Math.floor(Math.random() * nums)
+    if(value === 0){
+        var values = Math.floor(Math.random() * nums)
+        value = values;
+    }
+    console.log(value);
+    return value;
+    }
+    var avas = randoms();
+    var user = randoms() * 10000;
+    ava.innerHTML = `<p>Page on promotion:${user}</p>`
+
+    users.innerHTML = `<p> Available user:60000 +</p>`
+    
+    </script>
+    
+    </body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>social bit | Login</title>
+    <link rel="stylesheet" href="login.css"/>
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+</head>
+<body>
+    <form onsubmit="PayWithPaystack()" class="form">
+     <div class="img-overlay">
+     </div>
+     <div class="icon">
+         <i>&times;</i></div>
+         <h1>Fill in the required details to start up process.</h1>
+         <div class="inputs">
+             <label for="name">Name</label>
+             <input id="name" type="text" placeholder=" Name" required/>
+         </div>
+         <div class="inputs">
+         <label for="name">Email</label>
+         <input id="email" type="email" placeholder="Email" required/>
+         </div>
+         <div class="inputs">
+                <label for="username">Username</label>
+                <input id="username" type="text" placeholder=" Instagram or Linkedln Username" required/>
+            </div>
+     <div class="bix-in">
+     <div class="inputs">
+     <p><h1 id="sub">SUB-TOTAL: ...</h1>
+     <h1>TAX:120</h1>
+     <h1 id="total">TOTAL: ...</h1>
+     </p>
+     <button type="click" class="button">Pay with Paystack</button>
+     <p>Haven't suscribe ?</p>
+     </div>
+     </div>
+    </form>
+   
+</body>
+</html>
+<script>
+var sub = document.getElementById("sub");
+var total = document.getElementById("total");
+var totals = localStorage.getItem("amountsb")? JSON.parseInt(localStorage.getItem("amountsb")):1000;
+var des = document.getElementById("des");
+var cart = JSON.stringify(localStorage.getItem("cart"));
+sub.innerHTML = `SUB-TOTAL: ${totals}`;
+total.innerHTML = `TOTAL: ${120 + Number(totals)}`;
+function payWithPaystack(){
+var handler = PaystackPop.setup({
+key:"",
+email:"chimdi4332@gmail.com",
+amount:Number("3700") * 100,
+callback:function(response){
+alert("Your transaction was successfull \n your order os being proccessed");
+},
+onClose:function(){
+alert("Get more followers before going.");
+}
+});
+handler.openIframe();
+}
+</script>

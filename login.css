@@ -1,0 +1,288 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Varela Round", sans-serif;
+
+}
+.form{
+    background-image: #f35b0e;
+    width: 400px;
+    height: 900px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    border-radius: 16px;
+    padding: 120px 50px;
+    box-shadow: 2px 2px 5px #000000ab;
+}
+.img-overlay::before{
+    content: '';
+    background-image: #f35b0e;
+    position: absolute;
+    left:0;
+    top:0;
+    opacity: 0.8;
+    width: 280px;
+    height: 900px;
+    border-radius: 16px;
+    z-index:-1;
+}
+.icon{
+    position: absolute;
+    top:90px;
+    right: 20px;
+    color:white;
+    cursor: pointer;
+    font-weight:800;
+}
+.form h1{
+    color: white;
+    font-size: 1rem;
+    text-align: left;
+    margin-bottom: 3rem;
+}
+.inputs{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+color: white;
+margin-bottom:1.5rem;
+font-size: 0.7rem;
+border-bottom: 1px solid rgba(231,231,231,0.8);
+}
+.inputs:hover{
+    border-bottom:3px solid white;
+    transition: 0.2 ease-in-out;
+}
+input{
+outline:none;
+}
+.bix-in{
+width:200px;
+height:300px;
+margin-top:50px;
+padding:auto 50px;
+position:absolute;
+}
+.bix-in h1{
+text-align:center;
+font-weight:500;
+
+}
+.bix-in p{
+font-weight:500;
+text-align:center;
+}
+.bix-in, .input{
+margin:10px 10px;
+padding:4px 4px;
+}
+#email, #email::placeholder{
+width: 100%;
+border: none;
+background: none;
+outline: none;
+color: rgba(255,255,255,0.5);
+margin-top: 0.5rem;
+font-size: 0.8rem;
+padding-bottom: 0.5rem;
+}
+#password, #password::placeholder{
+    width: 100%;
+    border: none;
+    background: none;
+    outline: none;
+    color: rgba(255,255,255,0.5);
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    padding-bottom: 0.5rem;
+    }
+    #c-password, #c-password::placeholder{
+        width: 100%;
+        border: none;
+        background: none;
+        outline: none;
+        color: rgba(255,255,255,0.5);
+        margin-top: 0.5rem;
+        font-size: 0.8rem;
+        padding-bottom: 0.5rem;
+        }
+        #name, #name::placeholder{
+        width: 100%;
+        border: none;
+        background: none;
+        outline: none;
+        color: rgba(255,255,255,0.5);
+        margin-top: 0.5rem;
+        font-size: 0.8rem;
+        padding-bottom: 0.5rem;
+        }
+        #username, #username::placeholder{
+        width: 100%;
+        border: none;
+        background: none;
+        outline: none;
+        color: rgba(255,255,255,0.5);
+        margin-top: 0.5rem;
+        font-size: 0.8rem;
+        padding-bottom: 0.5rem;
+        }
+        
+        .button{
+            width: 100%;
+            background: white;
+            border:none;
+            justify-content:center;
+            align-content:center;
+            border-radius: 30px;
+            padding: 14px 14px;
+            font-size:0.9rem;
+            font-weight: 500;
+            text-align:center;
+            text-transform: uppercase;
+            color: #0145ff;
+            outline: none;
+        }
+        .button:hover{
+            width: 100%;
+            background: transparent;
+            border:2px solid white;
+            border-radius: 30px;
+            padding: 14px 14px;
+            font-size:0.9rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            color: white;
+            outline: none;  
+            transition: 0.3s ease-in-out; 
+        }
+p{
+    margin: 20px auto;
+    color: rgba(255,255,255,0.5);
+    font-size: 0.8rem;
+}
+@media only screen and (max-width:850px){
+   
+.form{
+    margin-top: 40px;
+    background-image:#f35a0e ;
+    width: 280px;
+    height: 900px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    border-radius: 16px;
+    padding: 120px 50px;
+    box-shadow: 4px 4px 4px #000000ab;
+}
+.img-overlay::before{
+    content: '';
+background-color:#f35b0e;
+    position: absolute;
+    left:0;
+    top:0;
+    opacity: 0.8;
+    margin-top: 40px;
+    width: 280px;
+    height: 900px;
+    border-radius: 16px;
+    z-index:-1;
+}
+.icon{
+    position: absolute;
+    top:90px;
+    right: 20px;
+    color:white;
+    cursor: pointer;
+}
+.form h1{
+    color: white;
+    font-size: 1rem;
+    text-align: left;
+    margin-bottom: 3rem;
+}
+.inputs{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: flex-start;
+color: white;
+margin-bottom:1.5rem;
+font-size: 0.7rem;
+border-bottom: 1px solid rgba(231,231,231,0.8);
+}
+.inputs:hover{
+    border-bottom:3px solid white;
+    transition: 0.2 ease-in-out;
+}
+#email, #email::placeholder{
+width: 100%;
+border: none;
+background: none;
+outline: none;
+color: rgba(255,255,255,0.5);
+margin-top: 0.5rem;
+font-size: 0.8rem;
+padding-bottom: 0.5rem;
+}
+#password, #password::placeholder{
+    width: 100%;
+    border: none;
+    background: none;
+    outline: none;
+    color: rgba(255,255,255,0.5);
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    padding-bottom: 0.5rem;
+    }
+    #c-password, #c-password::placeholder{
+        width: 100%;
+        border: none;
+        background: none;
+        outline: none;
+        color: rgba(255,255,255,0.5);
+        margin-top: 0.5rem;
+        font-size: 0.8rem;
+        padding-bottom: 0.5rem;
+        }
+        .button{
+            width: 100%;
+            background: white;
+            border:none;
+            border-radius: 30px;
+            padding: 14px 14px;
+            font-size:0.9rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            color: #f35b0e;
+            outline: none;
+            text-align:center;
+            justify-content:center;
+        }
+        .button:hover{
+            width: 100%;
+            background: transparent;
+            border:2px solid white;
+            border-radius: 30px;
+            padding: 14px 14px;
+            font-size:0.9rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            color: white;
+            outline: none;  
+            transition: 0.3s ease-in-out; 
+        }
+p{
+    margin: 20px auto;
+    color: rgba(255,255,255,0.5);
+    font-size: 0.8rem;
+} 
+}
